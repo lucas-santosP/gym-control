@@ -2,7 +2,7 @@ import React from "react";
 import { tw } from "../libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
 
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { TextField } from "@/components/TextField";
 import { TextFieldPassword } from "@/components/TextFieldPassword";
 import { GradientButton } from "@/components/GradientButton";
@@ -20,7 +20,7 @@ const Register: React.FC = () => {
     console.log("submit Register Form", form);
   }
 
-  function goToRegister() {
+  function goToLogin() {
     navigation.navigate("login");
   }
 
@@ -34,6 +34,7 @@ const Register: React.FC = () => {
           <TextField
             iconName="user"
             placeholder="Name"
+            autoCapitalize="sentences"
             value={form.name}
             onChange={(e) => handleLoginFormChange("name", e.nativeEvent.text)}
           />
@@ -41,6 +42,7 @@ const Register: React.FC = () => {
           <TextField
             iconName="mail"
             placeholder="Email"
+            autoComplete="email"
             value={form.email}
             onChange={(e) => handleLoginFormChange("email", e.nativeEvent.text)}
           />
@@ -54,7 +56,7 @@ const Register: React.FC = () => {
       </View>
 
       <View style={tw("w-full")}>
-        <View>
+        <View style={tw("w-full flex-row")}>
           <GradientButton onPress={submitForm} iconName="user-plus">
             Register
           </GradientButton>
@@ -62,10 +64,10 @@ const Register: React.FC = () => {
 
         <View style={tw("border border-gray-300 w-full my-8")}></View>
 
-        <Text onPress={goToRegister} style={tw("font-sans text-sm text-center")}>
-          Already have an account?
+        <TouchableOpacity onPress={goToLogin} style={tw("py-2 flex-row justify-center")}>
+          <Text style={tw("font-sans text-sm text-center")}>Already have an account?</Text>
           <Text style={tw("text-fuchsia-500 ml-1")}>Login</Text>
-        </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

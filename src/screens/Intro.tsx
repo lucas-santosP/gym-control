@@ -9,14 +9,14 @@ const Intro: React.FC = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={tw("flex-1 justify-center items-center bg-gray-100 py-12")}>
-      <View style={tw("items-center mt-auto")}>
+    <View style={tw("flex-1 justify-center bg-white items-center py-12")}>
+      <View style={tw("items-center mt-auto w-full")}>
         <Image
-          style={tw("w-[180px] h-[130px]", { resizeMode: "contain" })}
+          style={tw("w-[185px] h-[130px]", { resizeMode: "contain" })}
           source={require("../assets/images/logo.png")}
         />
 
-        <Text style={tw("font-sans text-gray-600 text-base mb-8")}>- Track your gains -</Text>
+        <Text style={tw("font-sans text-gray-600 text-base mb-8")}>- Track Your Gains -</Text>
       </View>
 
       <View style={tw("flex-row w-full px-2 py-4 mt-auto")}>

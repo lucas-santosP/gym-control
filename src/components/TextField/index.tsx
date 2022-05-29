@@ -10,15 +10,20 @@ type IProps = {
 
 const TextField: React.FC<IProps> = ({ iconName, styles = "", ...inputProps }) => {
   return (
-    <View style={tw("relative")}>
+    <View style={tw("relative w-full mb-4 h-8", { minHeight: 60 })}>
       {iconName && (
-        <Feather style={tw("absolute left-4 top-[18px] text-gray-500")} name={iconName} size={18} />
+        <Feather
+          style={tw("absolute left-4 top-[20px] text-gray-500 z-2")}
+          name={iconName}
+          size={18}
+        />
       )}
 
       <TextInput
+        autoCapitalize="none"
         {...inputProps}
         style={tw(
-          "flex-1 font-sans text-sm border border-gray-300 rounded-2xl bg-gray-100 px-4 py-4 mb-4",
+          "flex-1 w-full font-sans text-sm border border-gray-300 rounded-2xl bg-gray-100 px-4 py-2 leading-4",
           { "pl-12": !!iconName },
           styles
         )}

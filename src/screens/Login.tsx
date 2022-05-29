@@ -2,7 +2,7 @@ import React from "react";
 import { tw } from "../libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
 
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { TextField } from "@/components/TextField";
 import { TextFieldPassword } from "@/components/TextFieldPassword";
 import { GradientButton } from "@/components/GradientButton";
@@ -34,6 +34,7 @@ const Login: React.FC = () => {
           <TextField
             iconName="mail"
             placeholder="Email"
+            autoComplete="email"
             value={form.email}
             onChange={(e) => handleFormChange("email", e.nativeEvent.text)}
           />
@@ -47,7 +48,7 @@ const Login: React.FC = () => {
       </View>
 
       <View style={tw("w-full")}>
-        <View>
+        <View style={tw("w-full flex-row")}>
           <GradientButton onPress={submitForm} iconName="log-in">
             Login
           </GradientButton>
@@ -55,10 +56,10 @@ const Login: React.FC = () => {
 
         <View style={tw("border border-gray-300 w-full my-8")}></View>
 
-        <Text onPress={goToRegister} style={tw("font-sans text-sm text-center")}>
-          Don{"’"}t have an account yet?
+        <TouchableOpacity onPress={goToRegister} style={tw("py-2 flex-row justify-center")}>
+          <Text style={tw("font-sans text-sm text-center")}>Don{"’"}t have an account yet?</Text>
           <Text style={tw("text-fuchsia-500 ml-1")}>Register</Text>
-        </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
