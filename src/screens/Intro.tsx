@@ -1,8 +1,9 @@
 import React from "react";
-import { tw } from "../libs/tailwind";
-import { Text, View, Image } from "react-native";
+import { tw } from "@/libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
-import { GradientButton } from "../components/GradientButton";
+
+import { Text, View, Image } from "react-native";
+import { GradientButton } from "@/components/GradientButton";
 
 const Intro: React.FC = () => {
   const navigation = useNavigation();

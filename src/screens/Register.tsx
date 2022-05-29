@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, View, TextInput } from "react-native";
-import { Feather } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
 import { tw } from "../libs/tailwind";
-import { GradientButton } from "../components/GradientButton";
-import { TextField } from "../components/TextField";
-import { TextFieldPassword } from "../components/TextFieldPassword";
+import { useNavigation } from "@react-navigation/native";
+
+import { Text, View } from "react-native";
+import { TextField } from "@/components/TextField";
+import { TextFieldPassword } from "@/components/TextFieldPassword";
+import { GradientButton } from "@/components/GradientButton";
 
 const Register: React.FC = () => {
   const navigation = useNavigation();
@@ -17,7 +17,7 @@ const Register: React.FC = () => {
   }
 
   async function submitForm() {
-    console.log("submitForm", form);
+    console.log("submit Register Form", form);
   }
 
   function goToRegister() {

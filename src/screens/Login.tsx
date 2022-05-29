@@ -3,21 +3,21 @@ import { tw } from "../libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
 
 import { Text, View } from "react-native";
-import { GradientButton } from "../components/GradientButton";
-import { TextField } from "../components/TextField";
-import { TextFieldPassword } from "../components/TextFieldPassword";
+import { TextField } from "@/components/TextField";
+import { TextFieldPassword } from "@/components/TextFieldPassword";
+import { GradientButton } from "@/components/GradientButton";
 
 const Login: React.FC = () => {
   const navigation = useNavigation();
 
-  const [loginForm, setLoginForm] = React.useState({ email: "", password: "" });
+  const [form, setForm] = React.useState({ email: "", password: "" });
 
-  function handleLoginFormChange(name: string, value: string) {
-    setLoginForm({ ...loginForm, [name]: value });
+  function handleFormChange(name: string, value: string) {
+    setForm({ ...form, [name]: value });
   }
 
-  async function submitLoginForm() {
-    console.log("submitLoginForm", loginForm);
+  async function submitForm() {
+    console.log("submit Login Form", form);
   }
 
   function goToRegister() {
@@ -34,21 +34,21 @@ const Login: React.FC = () => {
           <TextField
             iconName="mail"
             placeholder="Email"
-            value={loginForm.email}
-            onChange={(e) => handleLoginFormChange("email", e.nativeEvent.text)}
+            value={form.email}
+            onChange={(e) => handleFormChange("email", e.nativeEvent.text)}
           />
 
           <TextFieldPassword
             placeholder="Password"
-            value={loginForm.password}
-            onChange={(e) => handleLoginFormChange("password", e.nativeEvent.text)}
+            value={form.password}
+            onChange={(e) => handleFormChange("password", e.nativeEvent.text)}
           />
         </View>
       </View>
 
       <View style={tw("w-full")}>
         <View>
-          <GradientButton onPress={submitLoginForm} iconName="log-in">
+          <GradientButton onPress={submitForm} iconName="log-in">
             Login
           </GradientButton>
         </View>

@@ -1,6 +1,6 @@
 import { create } from "twrnc";
 
-const tailwind = create(require(`../../tailwind.config.js`));
+const tailwindRn = create(require(`../../tailwind.config.js`));
 
-const tw = tailwind.style;
+const tw = tailwindRn.style;
 export { tw };

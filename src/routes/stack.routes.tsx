@@ -1,6 +1,6 @@
-import { Login } from "../screens/Login";
-import { Intro } from "../screens/Intro";
-import { Register } from "../screens/Register";
+import { Login } from "@/screens/Login";
+import { Intro } from "@/screens/Intro";
+import { Register } from "@/screens/Register";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const { Screen, Navigator, Group } = createNativeStackNavigator();
