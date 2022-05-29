@@ -4,6 +4,8 @@ import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { tw } from "../libs/tailwind";
 import { GradientButton } from "../components/GradientButton";
+import { TextField } from "../components/TextField";
+import { TextFieldPassword } from "../components/TextFieldPassword";
 
 const Register: React.FC = () => {
   const navigation = useNavigation();
@@ -29,59 +31,36 @@ const Register: React.FC = () => {
         <Text style={tw("font-sans-bold text-xl mb-8")}>Create an Account</Text>
 
         <View style={tw("w-full")}>
-          <View style={tw("relative")}>
-            <Feather style={tw("absolute left-4 top-[18px] text-gray-500")} name="user" size={18} />
+          <TextField
+            iconName="user"
+            placeholder="Name"
+            value={form.name}
+            onChange={(e) => handleLoginFormChange("name", e.nativeEvent.text)}
+          />
 
-            <TextInput
-              value={form.email}
-              placeholder="Name"
-              onChange={(e) => handleLoginFormChange("email", e.nativeEvent.text)}
-              style={tw(
-                "flex-1 font-sans text-sm border border-gray-300 rounded-2xl bg-gray-100 px-2 py-4 pl-12 mb-4"
-              )}
-            />
-          </View>
+          <TextField
+            iconName="mail"
+            placeholder="Email"
+            value={form.email}
+            onChange={(e) => handleLoginFormChange("email", e.nativeEvent.text)}
+          />
 
-          <View style={tw("relative")}>
-            <Feather style={tw("absolute left-4 top-[18px] text-gray-500")} name="mail" size={18} />
-
-            <TextInput
-              value={form.email}
-              placeholder="Email"
-              onChange={(e) => handleLoginFormChange("email", e.nativeEvent.text)}
-              style={tw(
-                "flex-1 font-sans text-sm border border-gray-300 rounded-2xl bg-gray-100 px-2 py-4 pl-12 mb-4"
-              )}
-            />
-          </View>
-
-          <View style={tw("relative")}>
-            <Feather style={tw("absolute left-4 top-[18px] text-gray-500")} name="lock" size={18} />
-
-            <TextInput
-              value={form.password}
-              onChange={(e) => handleLoginFormChange("password", e.nativeEvent.text)}
-              secureTextEntry
-              placeholder="Password"
-              style={tw(
-                "flex-1 font-sans text-sm border border-gray-300 rounded-2xl bg-gray-100 px-2 py-4 pl-12 mb-4"
-              )}
-            />
-          </View>
+          <TextFieldPassword
+            placeholder="Password"
+            value={form.password}
+            onChange={(e) => handleLoginFormChange("password", e.nativeEvent.text)}
+          />
         </View>
       </View>
 
       <View style={tw("w-full")}>
         <View>
-          <GradientButton
-            onPress={submitForm}
-            icon={<Feather style={tw("mr-2 text-white")} name="user-plus" size={20} />}
-          >
+          <GradientButton onPress={submitForm} iconName="user-plus">
             Register
           </GradientButton>
         </View>
 
-        <View style={tw("border border-gray-300 w-full  my-8")}></View>
+        <View style={tw("border border-gray-300 w-full my-8")}></View>
 
         <Text onPress={goToRegister} style={tw("font-sans text-sm text-center")}>
           Already have an account?
