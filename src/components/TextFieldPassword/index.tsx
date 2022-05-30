@@ -10,7 +10,7 @@ const TextFieldPassword: React.FC<IProps> = ({ styles = "", ...inputProps }) => 
   const [showPassword, setShowPassword] = React.useState(false);
 
   return (
-    <View style={tw("relative")}>
+    <View style={tw("relative w-full min-h-[60px]")}>
       <TextField {...inputProps} secureTextEntry={!showPassword} styles={styles} iconName="lock" />
 
       <TouchableOpacity

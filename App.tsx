@@ -2,7 +2,7 @@ import React from "react";
 import { tw } from "@/libs/tailwind";
 import { Routes } from "./src/routes";
 import { Feather } from "@expo/vector-icons";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
 import {
@@ -57,8 +57,11 @@ export default function App() {
   if (!appIsReady) return null;
 
   return (
-    <SafeAreaView style={tw("flex-1")} onLayout={onLayoutRootView}>
-      <Routes />
-    </SafeAreaView>
+    <>
+      <StatusBar backgroundColor="#92A3FD" />
+      <SafeAreaView style={tw("flex-1")} onLayout={onLayoutRootView}>
+        <Routes />
+      </SafeAreaView>
+    </>
   );
 }

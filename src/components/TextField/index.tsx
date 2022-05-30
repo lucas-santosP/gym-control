@@ -8,9 +8,11 @@ type IProps = {
   styles?: string;
 } & TextInputProps;
 
-const TextField: React.FC<IProps> = ({ iconName, styles = "", ...inputProps }) => {
+const TextField: React.FC<IProps> = (props) => {
+  const { iconName, styles = "", ...inputProps } = props;
+
   return (
-    <View style={tw("relative w-full mb-4 h-8", { minHeight: 60 })}>
+    <View style={tw("relative w-full mb-4 min-h-[60px]")}>
       {iconName && (
         <Feather
           style={tw("absolute left-4 top-[20px] text-gray-500 z-2")}
