@@ -2,9 +2,9 @@ import * as yup from "yup";
 
 const step1Schema = yup
   .object({
-    name: yup.string().required().default(""),
-    email: yup.string().email().required().default(""),
-    password: yup.string().required().default(""),
+    name: yup.string().required().default("asd"),
+    email: yup.string().email().required().default("asd@asdas.com"),
+    password: yup.string().required().default("123"),
   })
   .required();
 

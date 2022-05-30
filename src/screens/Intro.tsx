@@ -3,7 +3,7 @@ import { tw } from "@/libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
 
 import { Text, View, Image } from "react-native";
-import { GradientButton } from "@/components/GradientButton";
+import { GradientButton } from "@/components/gradient-button";
 
 const Intro: React.FC = () => {
   const navigation = useNavigation();

@@ -5,9 +5,9 @@ import { useNavigation } from "@react-navigation/native";
 import { IFormRegister } from "./form-validation";
 
 import { Text, TouchableOpacity, View } from "react-native";
-import { TextField } from "@/components/TextField";
-import { TextFieldPassword } from "@/components/TextFieldPassword";
-import { GradientButton } from "@/components/GradientButton";
+import { TextField } from "@/components/text-field";
+import { TextFieldPassword } from "@/components/text-field-password";
+import { GradientButton } from "@/components/gradient-button";
 
 type IProps = {
   form: UseFormReturn<IFormRegister>;
@@ -84,8 +84,10 @@ const Step1: React.FC<IProps> = ({ form, nextStep }) => {
         <View style={tw("border border-gray-300 w-full my-8")}></View>
 
         <TouchableOpacity onPress={goToLogin} style={tw("py-2 flex-row justify-center")}>
-          <Text style={tw("font-sans text-sm text-center")}>Already have an account?</Text>
-          <Text style={tw("text-fuchsia-500 ml-1")}>Login</Text>
+          <Text style={tw("font-sans text-sm text-gray-500 text-center")}>
+            Already have an account?
+          </Text>
+          <Text style={tw("font-sans text-sm text-fuchsia-500 ml-1")}>Login</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -3,7 +3,7 @@ import { tw } from "@/libs/tailwind";
 
 import { Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { ThemeGradient } from "@/components/ThemeGradient";
+import { ThemeGradient } from "@/components/theme-gradient";
 
 type IProps = {
   onPress?: () => void;

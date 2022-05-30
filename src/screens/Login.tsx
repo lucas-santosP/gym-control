@@ -3,9 +3,9 @@ import { tw } from "../libs/tailwind";
 import { useNavigation } from "@react-navigation/native";
 
 import { Text, TouchableOpacity, View } from "react-native";
-import { TextField } from "@/components/TextField";
-import { TextFieldPassword } from "@/components/TextFieldPassword";
-import { GradientButton } from "@/components/GradientButton";
+import { TextField } from "@/components/text-field";
+import { TextFieldPassword } from "@/components/text-field-password";
+import { GradientButton } from "@/components/gradient-button";
 
 const Login: React.FC = () => {
   const navigation = useNavigation();

@@ -4,8 +4,8 @@ import { UseFormReturn, Controller } from "react-hook-form";
 import { IFormRegister } from "./form-validation";
 
 import { Image, ScrollView, Text, View } from "react-native";
-import { TextField } from "@/components/TextField";
-import { GradientButton } from "@/components/GradientButton";
+import { TextField } from "@/components/text-field";
+import { GradientButton } from "@/components/gradient-button";
 
 type IProps = {
   form: UseFormReturn<IFormRegister>;

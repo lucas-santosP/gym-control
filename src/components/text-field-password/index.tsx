@@ -2,7 +2,7 @@ import React from "react";
 import { tw } from "../../libs/tailwind";
 import { TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { TextField, ITextFieldProps } from "../TextField";
+import { TextField, ITextFieldProps } from "../text-field";
 
 type IProps = Omit<ITextFieldProps, "iconName">;
 
