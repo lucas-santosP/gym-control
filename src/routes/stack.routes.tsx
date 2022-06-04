@@ -2,6 +2,7 @@ import { Login } from "@/screens/login";
 import { Intro } from "@/screens/intro";
 import { Register } from "@/screens/register";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Home } from "@/screens/home";
 
 const { Screen, Navigator, Group } = createNativeStackNavigator();
 
@@ -17,7 +18,7 @@ export function StackRoutes() {
 
       {/* Logged pages */}
       <Group screenOptions={{ headerShown: false }}>
-        {/* <Screen name="profile" component={Profile}  /> */}
+        <Screen name="home" component={Home} />
       </Group>
     </Navigator>
   );

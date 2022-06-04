@@ -20,7 +20,9 @@ const Intro: React.FC = () => {
       </View>
 
       <View style={tw("flex-row w-full px-2 py-4 mt-auto")}>
-        <GradientButton onPress={() => navigation.navigate("register")}>Get Started</GradientButton>
+        <GradientButton onPress={() => navigation.reset({ routes: [{ name: "register" }] })}>
+          Get Started
+        </GradientButton>
       </View>
     </View>
   );

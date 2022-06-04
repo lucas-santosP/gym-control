@@ -25,7 +25,7 @@ const Login: React.FC = () => {
   }
 
   return (
-    <View style={tw("flex-1 justify-between items-center bg-white py-12 px-4")}>
+    <View style={tw("flex-1 justify-between items-center bg-white py-8 px-4")}>
       <View style={tw("w-full items-center")}>
         <Text style={tw("font-sans text-lg")}>Hey there,</Text>
         <Text style={tw("font-sans-bold text-xl mb-8")}>Welcome Back</Text>

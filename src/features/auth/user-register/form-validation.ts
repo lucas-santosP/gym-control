@@ -2,18 +2,18 @@ import * as yup from "yup";
 
 const step1Schema = yup
   .object({
-    name: yup.string().required().default("asd"),
-    email: yup.string().email().required().default("asd@asdas.com"),
-    password: yup.string().required().default("123"),
+    name: yup.string().required().default("Lucas"),
+    email: yup.string().email().required().default("lucas@email.com"),
+    password: yup.string().required().default("123456"),
   })
   .required();
 
 const step2Schema = yup
   .object({
-    gender: yup.string().required().default(""),
-    birthDate: yup.string().required().default(""),
-    weight: yup.string().required().default(""),
-    height: yup.string().required().default(""),
+    gender: yup.string().required().default("gender"),
+    birthDate: yup.string().required().default("birth"),
+    weight: yup.string().required().default("70"),
+    height: yup.string().required().default("180"),
   })
   .required();
 

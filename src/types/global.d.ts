@@ -4,6 +4,7 @@ export declare global {
       login: undefined;
       register: undefined;
       intro: undefined;
+      home: undefined;
     }
   }
 }
